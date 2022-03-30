@@ -1,3 +1,8 @@
+
+//Question:There are 10 Social Security Numbers (SSN) in “S1.txt” and “S2.txt” files.
+//Write a C program that saves the common SSNs in the two files to the S3.txt file.
+
+
 #include <stdio.h>
 #include <string.h>
 
