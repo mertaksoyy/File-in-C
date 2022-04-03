@@ -1,3 +1,14 @@
+/*Write a C program that finds the number of appearances the word received from the user occurs 
+in the file. It can be used the robinson.txt file to test the program. The program should increase 
+the number of appearances if the exact same word is received from the user in the file, it should 
+not increase the number of appearances when a part of the word or a letter is given as input. 
+
+Stage 1: Open file and read data
+Stage 2: Getting the search word from the user
+Stage 3: Transferring the data read from the file to the string
+Stage 4: Searching for word in string
+Stage 5: Calculating and then printing the number of appearances*/
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -18,7 +29,7 @@ int main()
 	scanf("%s",word);
 		
 	if((fp=fopen("robinson.txt","r"))==NULL){
-		printf("File couldn't opened '"); //Dosyanın açılıp açılmadığını kontrol ettiğimiz kısım.
+		printf("File couldn't opened '"); //DosyanÄ±n aÃ§Ä±lÄ±p aÃ§Ä±lmadÄ±ÄŸÄ±nÄ± kontrol ettiÄŸimiz kÄ±sÄ±m.
 		return 0;
 		}
 		
@@ -36,7 +47,7 @@ int main()
 		
 		for(i = 0 ; i <strlen(word); i ++)
 		{
-			file_word[i] = tolower(file_word[i]); //Fıle icerisindeki butun kelimeleri kucuk harfe cevirdik
+			file_word[i] = tolower(file_word[i]); //FÄ±le icerisindeki butun kelimeleri kucuk harfe cevirdik
 		}
 		
 		if(strcmp(word,file_word) == 0)
@@ -47,13 +58,13 @@ int main()
 		{ 
 			for(i = 0 ; i <strlen(file_word); i++)
 			{
-				if(file_word[i] == '.' || file_word[i] == ',') //virgul veya nokta olması durumunda kontrol ettiğimiz kısım
+				if(file_word[i] == '.' || file_word[i] == ',') //virgul veya nokta olmasÄ± durumunda kontrol ettiÄŸimiz kÄ±sÄ±m
 				{
 					sayac=1;
 				}
 				
 			}
-			if (sayac = 1 ) // kelimenin içerisinde nokta(.) veya virgul(,) varsa
+			if (sayac = 1 ) // kelimenin iÃ§erisinde nokta(.) veya virgul(,) varsa
 			{
 				for(i = 0 ; i <strlen(file_word); i++)
 				{
