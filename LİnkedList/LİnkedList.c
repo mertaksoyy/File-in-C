@@ -58,11 +58,7 @@ void MiddleNodeDeletion(int pos)
 		temp->Next=del->Next;
 		free(del);
 	}
-	
 }
-
-
-
 
 
 int main()
